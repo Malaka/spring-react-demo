@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemList fetches data from server when server returns a successful response 1`] = `
+<ItemsDisplay
+  items={
+    Array [
+      Object {
+        "category": Object {
+          "id": 1,
+          "name": "Milk",
+        },
+        "description": "This is fresh",
+        "id": 6,
+        "name": "Fresh Milk",
+      },
+    ]
+  }
+  removeHandler={[Function]}
+>
+  <div
+    className="float-right"
+  >
+    <Button
+      color="success"
+      tag={[Function]}
+      to="/items/new"
+    >
+      Add Grocery Item
+    </Button>
+  </div>
+  <h3>
+    My Grocery List
+  </h3>
+</ItemsDisplay>
+`;
