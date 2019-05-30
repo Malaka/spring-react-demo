@@ -26,10 +26,13 @@ class Initializer implements CommandLineRunner {
                 forEach(name -> categoryRepository.save(new Category(name)));
 
         Category milk = categoryRepository.findByName("Milk");
+        Category veg = categoryRepository.findByName("Veg");
 
         GroceryItem freshMilk = GroceryItem.builder().name("Fresh Milk").description("This is fresh").category(milk).build();
+        GroceryItem armandMilk = GroceryItem.builder().name("Armand Milk").description("This is fresh").category(milk).build();
+        GroceryItem tomato = GroceryItem.builder().name("Tomato").description("This is Veg").category(veg).build();
         itemRepository.save(freshMilk);
-
-        categoryRepository.findAll().forEach(System.out::println);
+        itemRepository.save(armandMilk);
+        itemRepository.save(tomato);
     }
 }
